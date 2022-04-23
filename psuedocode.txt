@@ -1,0 +1,8 @@
+1. User selects from options rock, paper, or scissors (playerSelection)
+2. The computer randomly selects rock, paper, or scissors when the user makes their selection
+    (computerSelection)
+3. The user either wins "You win! (user selection) beats (computer selection) OR
+4. The user loses "You lose! (computer selection) beats (user selection)
+5. The playerSelection should be case insensitive
+    (this means you're going to use a prompt or input of some sort)
+
