@@ -1,6 +1,6 @@
-// let userPlay = prompt(
-//   "Please make a selection. Select rock, paper, or scissors."
-// ).toLowerCase();
+let userPlay = prompt(
+  "Please make a selection. Select rock, paper, or scissors."
+).toLowerCase();
 
 let playerScore = 0;
 let cpuScore = 0;
@@ -58,11 +58,15 @@ function game() {
   let rounds = 5;
 
   for (let i = 0; i < rounds; i++) {
-    let userPlay = prompt(
-      "Please make a selection. Select rock, paper, or scissors."
-    ).toLowerCase();
+    if (i === 0) {
+      console.log(playRound(userPlay, computerPlay()));
+    } else {
+      userPlay = prompt(
+        "Please make a selection. Select rock, paper, or scissors."
+      ).toLowerCase();
 
-    console.log(playRound(userPlay, computerPlay()));
+      console.log(playRound(userPlay, computerPlay()));
+    }
   }
 
   if (playerScore > cpuScore) {
