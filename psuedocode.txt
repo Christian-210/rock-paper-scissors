@@ -5,4 +5,5 @@
 4. The user loses "You lose! (computer selection) beats (user selection)
 5. The playerSelection should be case insensitive
     (this means you're going to use a prompt or input of some sort)
+6. Return the results, don't console.log them
 
