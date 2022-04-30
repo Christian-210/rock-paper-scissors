@@ -1,0 +1,143 @@
+html {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: rgba(31, 31, 31, 1);
+  background: -moz-linear-gradient(
+    -45deg,
+    rgba(31, 31, 31, 1) 0%,
+    rgba(31, 31, 31, 1) 50%,
+    rgba(199, 36, 177, 1) 100%
+  );
+  background: -webkit-gradient(
+    left top,
+    right bottom,
+    color-stop(0%, rgba(31, 31, 31, 1)),
+    color-stop(50%, rgba(31, 31, 31, 1)),
+    color-stop(100%, rgba(199, 36, 177, 1))
+  );
+  background: -webkit-linear-gradient(
+    -45deg,
+    rgba(31, 31, 31, 1) 0%,
+    rgba(31, 31, 31, 1) 50%,
+    rgba(199, 36, 177, 1) 100%
+  );
+  background: -o-linear-gradient(
+    -45deg,
+    rgba(31, 31, 31, 1) 0%,
+    rgba(31, 31, 31, 1) 50%,
+    rgba(199, 36, 177, 1) 100%
+  );
+  background: -ms-linear-gradient(
+    -45deg,
+    rgba(31, 31, 31, 1) 0%,
+    rgba(31, 31, 31, 1) 50%,
+    rgba(199, 36, 177, 1) 100%
+  );
+  background: linear-gradient(
+    135deg,
+    rgba(31, 31, 31, 1) 0%,
+    rgba(31, 31, 31, 1) 50%,
+    rgba(199, 36, 177, 1) 100%
+  );
+}
+
+.container {
+  padding: 3em;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3em;
+  font-weight: 300;
+  margin: auto 16px 8px;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 1em;
+}
+
+p {
+  text-align: center;
+  margin: auto 16px 16px;
+}
+
+span.purple {
+  color: rgb(234 147 254);
+}
+
+span.versus {
+  font-size: 2em;
+  padding: 0 1em;
+}
+
+hr {
+  max-width: 48px;
+  box-shadow: none;
+  margin: 2em auto;
+  border-color: #dd59fa;
+}
+
+button {
+  padding: 1em 3em;
+  font-size: 0.8em;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+  transition: 0.2s all ease-in-out;
+  border-radius: 50%;
+  background: #fff;
+  color: rgba(46, 46, 46, 1);
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  box-shadow: 0px 0px 16px rgba(221, 89, 250, 0.7);
+}
+
+button:hover {
+  background-color: #fff;
+  color: rgba(46, 46, 46, 1);
+}
+
+.game-board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+#btn-container {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-top: 5em;
+}
+
+img {
+  height: 250px;
+  width: 250px;
+  background-color: transparent;
+  border: none;
+  overflow: hidden;
+}

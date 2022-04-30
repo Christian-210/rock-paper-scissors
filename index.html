@@ -5,9 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock,Paper,Scissors</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="container">
+      <h1>Ultimate <span class="purple">RPS</span></h1>
+      <p>The ultimate battle of rock, paper, scissors</p>
+      <hr />
+      <div class="game-board">
+        <div class="info-container player-info">
+          <h2>Player One</h2>
+          <img src="" alt="" id="player-img" />
+          <div id="player-score">0</div>
+        </div>
+        <span class="versus">VS</span>
+        <div class="info-container player-info">
+          <h2>Player Two (CPU)</h2>
+          <img src="" alt="" id="cpu-img" />
+          <div id="cpu-score">0</div>
+        </div>
+      </div>
+
+      <div class="info-container win-lose-msg"></div>
+
+      <div id="btn-container">
+        <button id="btn-rock" value="rock">Rock</button>
+        <button id="btn-paper" value="paper">Paper</button>
+        <button id="btn-scissors" value="scissors">Scissors</button>
+      </div>
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>
