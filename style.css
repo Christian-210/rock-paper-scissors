@@ -12,6 +12,7 @@ body {
   background-attachment: fixed;
   margin: 0;
   padding: 0;
+  min-width: 600px;
   background: rgba(31, 31, 31, 1);
   background: -moz-linear-gradient(
     -45deg,
@@ -54,6 +55,8 @@ body {
 
 .container {
   padding: 3em;
+  /* min-width: 600px; */
+  box-sizing: border-box;
 }
 
 h1 {
@@ -201,4 +204,17 @@ img {
 .player-rotate {
   transform: scaleX(-1) rotate(-90deg);
   transition: 0.5s all ease;
+}
+
+@media only screen and (max-width: 1000px) {
+  #btn-container {
+    position: relative;
+    flex-direction: row;
+    justify-content: center;
+    left: auto;
+  }
+
+  .container {
+    padding: 0;
+  }
 }
