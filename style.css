@@ -178,7 +178,7 @@ img {
 }
 
 .img-container {
-  background-image: url(./images/rock-paper-scissors-neon-icons-08.png);
+  background-image: url("https://christian-210.github.io/images/rock-paper-scissors-neon-icons-08.png");
   background-size: cover;
   background-position: center;
   height: 250px;
