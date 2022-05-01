@@ -194,7 +194,7 @@ img {
 }
 
 .cpu-rotate {
-  transform: rotate(-90deg);
+  transform: scaleX(-1) rotate(-90deg);
   transition: 0.2s all ease;
 }
 
