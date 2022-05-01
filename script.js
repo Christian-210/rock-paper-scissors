@@ -10,6 +10,9 @@ const playerBtns = document.querySelectorAll("button");
 const p1Score = document.getElementById("player-score");
 const p2Score = document.getElementById("cpu-score");
 const gameMsg = document.querySelector(".win-lose-msg");
+const playerImg = document.getElementById("player-img");
+const cpuImg = document.getElementById("cpu-img");
+const imgContainer = document.querySelectorAll(".img-container");
 let playerChoice;
 
 let playerScore = 0;
@@ -30,45 +33,66 @@ function computerPlay() {
 function playRound(playerSelection, computerSelection) {
   console.log(playerSelection, computerSelection);
 
+  imgContainer[0].classList.remove("img-container");
+  imgContainer[1].classList.remove("img-container");
+  playerImg.classList.add("show", "player-rotate");
+  cpuImg.classList.add("show", "cpu-rotate");
+
+  if (playerSelection === "rock") {
+    playerImg.src = "images/rock-paper-scissors-neon-icons_rock-ll.svg";
+  } else if (playerSelection === "paper") {
+    playerImg.src = "images/rock-paper-scissors-neon-icons_paper-ll.svg";
+  } else {
+    playerImg.src = "images/rock-paper-scissors-neon-icons_scissors-ll.svg";
+  }
+
+  if (computerSelection === "rock") {
+    cpuImg.src = "images/rock-paper-scissors-neon-icons_rock-ll.svg";
+  } else if (computerSelection === "paper") {
+    cpuImg.src = "images/rock-paper-scissors-neon-icons_paper-ll.svg";
+  } else {
+    cpuImg.src = "images/rock-paper-scissors-neon-icons_scissors-ll.svg";
+  }
+
   if (playerSelection === "rock") {
     if (playerSelection === computerSelection) {
-      return `It's a tie!`;
+      gameMsg.textContent = `It's a tie!`;
     } else if (computerSelection === "scissors") {
       playerScore++;
       p1Score.textContent = playerScore;
-      return `You win! ${playerSelection} beats ${computerSelection}.`;
+      gameMsg.textContent = `You win! ${playerSelection} beats ${computerSelection}.`;
     } else {
       cpuScore++;
       p2Score.textContent = cpuScore;
-      return `You lose! ${computerSelection} beats ${playerSelection}.`;
+      gameMsg.textContent = `You lose! ${computerSelection} beats ${playerSelection}.`;
     }
   }
 
   if (playerSelection === "scissors") {
     if (playerSelection === computerSelection) {
-      return `It's a tie!`;
+      gameMsg.textContent = `It's a tie!`;
     } else if (computerSelection === "paper") {
       playerScore++;
       p1Score.textContent = playerScore;
-      return `You win! ${playerSelection} beats ${computerSelection}.`;
+      gameMsg.textContent = `You win! ${playerSelection} beats ${computerSelection}.`;
     } else {
       cpuScore++;
       p2Score.textContent = cpuScore;
-      return `You lose! ${computerSelection} beats ${playerSelection}.`;
+      gameMsg.textContent = `You lose! ${computerSelection} beats ${playerSelection}.`;
     }
   }
 
   if (playerSelection === "paper") {
     if (playerSelection === computerSelection) {
-      return `It's a tie!`;
+      gameMsg.textContent = `It's a tie!`;
     } else if (computerSelection === "rock") {
       playerScore++;
       p1Score.textContent = playerScore;
-      return `You win! ${playerSelection} beats ${computerSelection}.`;
+      gameMsg.textContent = `You win! ${playerSelection} beats ${computerSelection}.`;
     } else {
       cpuScore++;
       p2Score.textContent = cpuScore;
-      return `You lose! ${computerSelection} beats ${playerSelection}.`;
+      gameMsg.textContent = `You lose! ${computerSelection} beats ${playerSelection}.`;
     }
   }
 }
@@ -76,6 +100,13 @@ function playRound(playerSelection, computerSelection) {
 playerBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
     playerChoice = btn.value;
+    playerImg.classList.add("animate__slideInLeft");
+    cpuImg.classList.add("animate__slideInRight");
+
+    setTimeout(() => {
+      playerImg.classList.remove("animate__slideInLeft");
+      cpuImg.classList.remove("animate__slideInRight");
+    }, 1000);
 
     if (playerScore !== winningScore && cpuScore !== winningScore) {
       playRound(playerChoice, computerPlay());

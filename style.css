@@ -8,6 +8,8 @@ body {
   font-family: "Montserrat", sans-serif;
   color: #fff;
   height: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   margin: 0;
   padding: 0;
   background: rgba(31, 31, 31, 1);
@@ -56,7 +58,7 @@ body {
 
 h1 {
   text-align: center;
-  font-size: 3em;
+  font-size: 3.5em;
   font-weight: 300;
   margin: auto 16px 8px;
 }
@@ -72,7 +74,7 @@ p {
 }
 
 span.purple {
-  color: rgb(234 147 254);
+  color: #ff88e3;
 }
 
 span.versus {
@@ -84,7 +86,7 @@ hr {
   max-width: 48px;
   box-shadow: none;
   margin: 2em auto;
-  border-color: #dd59fa;
+  border-color: #ff88e3;
 }
 
 button {
@@ -99,18 +101,36 @@ button {
   font-weight: 600;
   letter-spacing: 2px;
   text-transform: uppercase;
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
   border: none;
-  box-shadow: 0px 0px 16px rgba(221, 89, 250, 0.7);
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.6);
+  border: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+button img {
+  display: block;
+  width: 60px;
+  height: 50px;
+  margin-bottom: 4px;
+  margin-top: -10px;
+  transform: rotate(0deg);
+  transition: 0.2s all ease-in-out;
 }
 
 button:hover {
   background-color: #fff;
-  color: rgba(46, 46, 46, 1);
+  box-shadow: 0px 0px 16px rgba(221, 89, 250, 0.9);
+  border: 1px solid #ffa6f3;
+}
+
+button:hover > img {
+  transform: rotate(-35deg);
 }
 
 .game-board {
@@ -126,18 +146,56 @@ button:hover {
   text-align: center;
 }
 
+.info-container.win-lose-msg {
+  font-size: 1.6em;
+  font-weight: 300;
+  margin-top: 2em;
+}
+
 #btn-container {
   margin: auto;
   display: flex;
   justify-content: center;
   gap: 32px;
   margin-top: 5em;
+  position: absolute;
+  top: 0;
+  left: 40px;
+  flex-direction: column;
 }
 
 img {
+  display: none;
   height: 250px;
   width: 250px;
   background-color: transparent;
   border: none;
   overflow: hidden;
+}
+
+.show {
+  display: block;
+}
+
+.img-container {
+  background-image: url("/images/rock-paper-scissors-neon-icons-08.png");
+  background-size: cover;
+  background-position: center;
+  height: 250px;
+  width: 250px;
+  border-radius: 12px;
+}
+
+.score-item {
+  font-size: 5em;
+}
+
+.cpu-rotate {
+  transform: rotate(-90deg);
+  transition: 0.2s all ease;
+}
+
+.player-rotate {
+  transform: scaleX(-1) rotate(-90deg);
+  transition: 0.5s all ease;
 }

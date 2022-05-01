@@ -11,6 +11,10 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -21,23 +25,42 @@
       <div class="game-board">
         <div class="info-container player-info">
           <h2>Player One</h2>
-          <img src="" alt="" id="player-img" />
-          <div id="player-score">0</div>
+          <div class="img-container">
+            <img class="animate__animated" src="" alt="" id="player-img" />
+          </div>
+          <div id="player-score" class="score-item">0</div>
         </div>
         <span class="versus">VS</span>
-        <div class="info-container player-info">
+        <div class="info-container cpu-info">
           <h2>Player Two (CPU)</h2>
-          <img src="" alt="" id="cpu-img" />
-          <div id="cpu-score">0</div>
+          <div class="img-container">
+            <img class="animate__animated" src="" alt="" id="cpu-img" />
+          </div>
+          <div id="cpu-score" class="score-item">0</div>
         </div>
       </div>
 
-      <div class="info-container win-lose-msg"></div>
+      <div class="info-container win-lose-msg">Let the battle begin!!!!</div>
 
       <div id="btn-container">
-        <button id="btn-rock" value="rock">Rock</button>
-        <button id="btn-paper" value="paper">Paper</button>
-        <button id="btn-scissors" value="scissors">Scissors</button>
+        <button id="btn-rock" value="rock">
+          <img src="images/rock-paper-scissors-neon-icons_rock-ss.svg" alt="" />
+          Rock
+        </button>
+        <button id="btn-paper" value="paper">
+          <img
+            src="images/rock-paper-scissors-neon-icons_paper-ss.svg"
+            alt=""
+          />
+          Paper
+        </button>
+        <button id="btn-scissors" value="scissors">
+          <img
+            src="images/rock-paper-scissors-neon-icons_scissors-ss.svg"
+            alt=""
+          />
+          Scissors
+        </button>
       </div>
     </div>
 
